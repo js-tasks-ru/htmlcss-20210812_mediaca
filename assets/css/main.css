@@ -18,8 +18,11 @@
 
     --primary: var(--blue);
     --secondary: var(--purple);
+
+    --text: var(--black);
 }
 
-* {
+html {
     font-family: 'Inter', sans-serif;
+    font-size: 62.5%;
 }
