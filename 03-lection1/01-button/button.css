@@ -24,20 +24,20 @@
     background: var(--blue-dark);
 }
 
-.button_type_secondary {
+.button_secondary {
     background: var(--purple);
 }
 
-.button_type_secondary:hover {
+.button_secondary:hover {
     background: var(--purple-dark);
 }
 
-.button_type_alternate {
+.button_alternate {
     background: var(--white);
     border-color: var(--grey-3);
     color: var(--grey-4);
 }
 
-.button_type_alternate:hover {
+.button_alternate:hover {
     border-color: var(--black);
 }
