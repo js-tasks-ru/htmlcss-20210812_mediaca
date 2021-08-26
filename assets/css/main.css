@@ -1,4 +1,5 @@
 @import '../fonts/fonts.css';
+@import './normalize.css';
 
 :root {
     --white: #ffffff;
@@ -17,8 +18,11 @@
 
     --primary: var(--blue);
     --secondary: var(--purple);
+
+    --text: var(--black);
 }
 
-* {
-    font-family: 'Roboto', sans-serif;
+html {
+    font-family: 'Inter', sans-serif;
+    font-size: 62.5%;
 }
