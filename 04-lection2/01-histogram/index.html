@@ -66,5 +66,24 @@
     </article>
 </div>
 
+<script>
+    const histogramDataItems = document.querySelectorAll('.histogram__data-item');
+
+    histogramDataItems.forEach((item) => {
+        item.style.height = randomNumber(2, 100) + '%';
+    })
+
+    /**
+     * @param {number} min
+     * @param {number} max
+     * @return {number}
+     * @link https://learn.javascript.ru/task/random-int-min-max источник
+     */
+    function randomNumber(min, max) {
+        let rand = min - 0.5 + Math.random() * (max - min + 1);
+        return Math.round(rand);
+    }
+</script>
+
 </body>
 </html>

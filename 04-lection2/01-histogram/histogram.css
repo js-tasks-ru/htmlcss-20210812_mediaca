@@ -41,13 +41,14 @@
 }
 
 .histogram__data {
+    align-items: flex-end;
     display: flex;
+    height: 5rem;
 }
 
 .histogram__data-item {
     background: var(--blue);
     flex: 1 1 9px;
-    height: 5rem;
     margin-right: 1px;
 }
 
