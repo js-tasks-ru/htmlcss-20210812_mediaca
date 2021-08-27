@@ -1,0 +1,13 @@
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
+    padding: 20px; /** @todo заменить на реальные **/
+}
+
+.card__title {
+    color: var(--black);
+    font: 500 2.1rem/2.5rem Roboto, sans-serif;
+    margin: 0;
+    text-align: center;
+}
