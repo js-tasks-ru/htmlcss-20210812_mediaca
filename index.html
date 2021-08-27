@@ -6,12 +6,28 @@
     <meta name="description" content="страница с презентацией компонентов">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./components/wrapper/wrapper.css">
+    <link rel="stylesheet" href="./components/header/header.css">
     <link rel="stylesheet" href="./components/main/main.css">
     <link rel="stylesheet" href="./components/footer/footer.css">
+    <link rel="stylesheet" href="./components/nav/nav.css">
 </head>
 <body>
-<header class="header">
-    <!-- @todo заполнить разметкой -->
+<header class="header wrapper">
+    <span class="logo">
+        logo
+        <!-- @todo добавить лого -->
+    </span>
+    <div class="header__additional">
+        <nav class="nav header__nav">
+            <span class="nav__item nav__item_active">Components</span>
+            <a href="#" class="nav__item">About</a>
+            <a href="#" class="nav__item">Contact</a>
+        </nav>
+        <div class="theme-switcher header__switcher">
+            switcher
+            <!-- @todo создать компонент переключатель темы -->
+        </div>
+    </div>
 </header>
 <main class="main">
     <div class="wrapper">
