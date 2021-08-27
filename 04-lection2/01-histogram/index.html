@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <!-- Страница с гистограммой -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./histogram.css">
-    </head>
-    <body>
+<head>
+    <title>Страница компонента Гистограмма</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Демонстрационная страница компонента Гистограмма">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../components/wrapper/wrapper.css">
+    <link rel="stylesheet" href="./histogram.css">
+</head>
+<body>
 
-    </body>
+<div class="wrapper">
+    <br><br>
+    <article class="histogram">
+        <header class="histogram__header">
+            <div class="histogram__total">
+                <span class="histogram__total-title">Total orders</span>
+                <span class="histogram__total-value">50&nbsp;254</span>
+            </div>
+            <a class="histogram__link" href="#">View&nbsp;all</a>
+        </header>
+        <div class="histogram__data">
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+            <i class="histogram__data-item"></i>
+        </div>
+    </article>
+</div>
+
+<script>
+    const histogramDataItems = document.querySelectorAll('.histogram__data-item');
+
+    histogramDataItems.forEach((item) => {
+        item.style.height = randomNumber(2, 100) + '%';
+    })
+
+    /**
+     * @param {number} min
+     * @param {number} max
+     * @return {number}
+     * @link https://learn.javascript.ru/task/random-int-min-max источник
+     */
+    function randomNumber(min, max) {
+        let rand = min - 0.5 + Math.random() * (max - min + 1);
+        return Math.round(rand);
+    }
+</script>
+
+</body>
 </html>
