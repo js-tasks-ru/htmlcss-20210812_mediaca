@@ -30,6 +30,22 @@
     margin: 0 0 8px;
 }
 
+.skeleton__line_w_38p {
+    width: 38%;
+}
+
+.skeleton__line_w_43p {
+    width: 43%;
+}
+
+.skeleton__line_w_89p {
+    width: 89%;
+}
+
+.skeleton__line_w_97p {
+    width: 97%;
+}
+
 .skeleton__line:last-child {
     margin: 0;
 }
