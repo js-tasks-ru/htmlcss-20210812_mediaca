@@ -2,7 +2,7 @@
     background: var(--white);
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
-    padding: 20px; /** @todo заменить на реальные **/
+    padding: 32px 25px 38px;
 }
 
 .card__title {
