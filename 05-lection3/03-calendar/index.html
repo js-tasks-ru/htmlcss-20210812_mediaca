@@ -12,7 +12,7 @@
 <div class="wrapper">
     <br><br>
     <article class="calendar calendar_max_width_304">
-        <h2 class="calendar__title">Август 2021</h2>
+        <h2 class="calendar__title js-calendar-title"></h2>
         <div class="calendar__wrapper">
             <div class="calendar__inner-wrapper">
                 <div class="calendar__cell calendar__cell_header">Пн</div>
@@ -23,48 +23,96 @@
                 <div class="calendar__cell calendar__cell_header">Сб</div>
                 <div class="calendar__cell calendar__cell_header">Вс</div>
 
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell calendar__cell_selected">1</div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
 
-                <div class="calendar__cell calendar__cell_light">2</div>
-                <div class="calendar__cell calendar__cell_light">3</div>
-                <div class="calendar__cell calendar__cell_light">4</div>
-                <div class="calendar__cell calendar__cell_selected">5</div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
 
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
 
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
 
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
-                <div class="calendar__cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
+                <div class="calendar__cell js-calendar-cell"></div>
             </div>
         </div>
     </article>
 </div>
+
+<script>
+    'use strict';
+
+    const title = document.querySelector('.js-calendar-title');
+    const cells = document.querySelectorAll('.js-calendar-cell');
+
+    const currentDate = new Date();
+    const currentDay = currentDate.getDate();
+
+    let indexFirstDayWeek = (new Date(currentDate.getFullYear(), currentDate.getMonth())).getDay();
+    indexFirstDayWeek = indexFirstDayWeek ? indexFirstDayWeek - 1 : 6;
+
+    const lastDayCurrentMonth = (new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0)).getDate();
+
+    let lastDayRange = currentDate.getDate() + 4;
+    lastDayRange = lastDayRange > lastDayCurrentMonth ? lastDayCurrentMonth : lastDayRange;
+
+    title.textContent = (currentDate.getMonth() + 1) + '.' + currentDate.getFullYear();
+
+    cells.forEach((cell, index) => {
+        if (indexFirstDayWeek > index) {
+            return;
+        }
+
+        const day = index - indexFirstDayWeek + 1;
+
+        if (lastDayCurrentMonth < day) {
+            return;
+        }
+
+        cell.textContent = day;
+
+        if (day === currentDay || day === lastDayRange) {
+            cell.classList.add('calendar__cell_selected');
+        } else if (day > currentDay && day < lastDayRange) {
+            cell.classList.add('calendar__cell_light');
+        }
+    });
+</script>
 </body>
 </html>
