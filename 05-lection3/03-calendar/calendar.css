@@ -5,7 +5,7 @@
     padding: 28px 26px 32px;
 }
 
-.calendar_max_width_304 {
+.calendar_preview {
     max-width: 304px;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .calendar__cell {
-    color: #334D6E;
+    color: var(--violet-blue);
     display: flex;
     align-items: center;
     justify-content: center;
