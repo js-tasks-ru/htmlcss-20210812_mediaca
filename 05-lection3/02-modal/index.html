@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<!-- Страница с модалкой -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./modal.css">
-        <title>Modal</title>
-    </head>
-    <body>
-    </body>
-    <script src="./index.js"></script> 
+<head>
+    <title>Компонент Модальное окно</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Демонстрационная страница компонента Модальное окно">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../components/wrapper/wrapper.css">
+    <link rel="stylesheet" href="../../03-lection1/01-button/button.css">
+    <link rel="stylesheet" href="./modal.css">
+    <script src="./index.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <br><br>
+    <button class="button button_primary" id="modal-open">Open modal</button>
+</div>
+
+<div class="modal" id="modal">
+    <div class="modal__content">
+        <button class="modal__close" id="modal-close">
+            <svg class="modal__close-icon" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.47141 0.528606C9.73176 0.788955 9.73176 1.21107 9.47141 1.47141L1.47141 9.47141C1.21107 9.73176 0.788955 9.73176 0.528606 9.47141C0.268256 9.21107 0.268256 8.78896 0.528606 8.52861L8.52861 0.528606C8.78896 0.268256 9.21107 0.268256 9.47141 0.528606Z"/>
+                <path d="M0.528606 0.528606C0.788955 0.268256 1.21107 0.268256 1.47141 0.528606L9.47141 8.52861C9.73176 8.78896 9.73176 9.21107 9.47141 9.47141C9.21107 9.73176 8.78896 9.73176 8.52861 9.47141L0.528606 1.47141C0.268256 1.21107 0.268256 0.788955 0.528606 0.528606Z"/>
+            </svg>
+        </button>
+
+        <h2 class="modal__title">Modal title</h2>
+        <p class="modal__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+            officia
+            consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
+            enim
+            velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+    </div>
+</div>
+
+<script>
+    const closeEl = document.getElementById('modal-close');
+    const modal = document.getElementById('modal');
+    const openEl = document.getElementById('modal-open');
+
+    new Modal(modal, openEl, closeEl, 'modal_active');
+</script>
+</body>
 </html>

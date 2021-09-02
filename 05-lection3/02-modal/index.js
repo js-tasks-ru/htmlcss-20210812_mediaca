@@ -1,19 +1,28 @@
-(function() {
-    const close = document.getElementById('modal-close');
-    const modal = document.getElementById('modal');
-    const modalOpen = document.getElementById('modal-open');
+'use strict';
 
-    if (!close || !modalOpen || !modal) {
-        return;
+class Modal {
+    _modalEl;
+
+    _elBody;
+
+    _activeClass;
+
+    constructor(modalEl, openEl, closeEl, activeClass) {
+        this._modalEl = modalEl;
+        this._elBody = document.body;
+        this._activeClass = activeClass;
+
+        openEl.addEventListener('click', this._open.bind(this));
+        closeEl.addEventListener('click', this._hide.bind(this));
     }
 
-    modalOpen.addEventListener('click', () => {
-        modal.style.display = 'block';
-        document.body.overflow = 'hidden';
-    });
+    _open() {
+        this._modalEl.classList.add(this._activeClass);
+        this._elBody.style.overflow = 'hidden';
+    }
 
-    close.addEventListener('click', () => {
-        modal.style.display = 'none';
-        document.body.overflow = 'initial';
-    });
-})();
+    _hide() {
+        this._modalEl.classList.remove(this._activeClass);
+        this._elBody.style.overflow = '';
+    }
+}

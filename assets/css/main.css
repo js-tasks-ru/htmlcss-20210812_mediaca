@@ -25,6 +25,7 @@
     --secondary: var(--purple);
 
     --text: var(--black);
+    --mobal-background-color: rgba(196, 196, 196, .5);
 }
 
 html {
