@@ -1,1 +1,46 @@
-/* Стилизация аккордеона */
+.accordion {
+    border: 1px solid var(--grey-3);
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 24px 50px 24px 32px;
+    position: relative;
+}
+
+.accordion[open] {
+    padding-bottom: 32px;
+}
+
+.accordion__title {
+    color: var(--black);
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 2.4rem;
+    display: block;
+    margin: 0;
+}
+
+.accordion__title::before {
+    background: url('arrow.svg') no-repeat;
+    content: ' ';
+    display: block;
+    height: 10px;
+    position: absolute;
+    right: 32px;
+    width: 18px;
+    top: 32px;
+}
+
+.accordion[open] .accordion__title::before {
+    transform: rotate(180deg);
+}
+
+.accordion__text {
+    color: var(--grey-4);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-style: normal;
+    font-weight: normal;
+    margin: 1.6rem 0 0;
+}
