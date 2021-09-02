@@ -10,15 +10,8 @@
 }
 
 .modal_active {
-    display: block;
-    z-index: 9999;
-}
-
-.modal__wrapper {
-    align-items: center;
-    min-height: 100%;
     display: flex;
-    justify-content: center;
+    z-index: 9999;
 }
 
 .modal__close {
@@ -43,6 +36,7 @@
 .modal__content {
     background: var(--white);
     border-radius: .8rem;
+    margin: auto;
     max-width: 42.8rem;
     padding: 4rem 4rem 3.3rem;
     position: relative;
