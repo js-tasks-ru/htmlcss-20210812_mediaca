@@ -1,9 +1,11 @@
 .header {
+    padding: 2.5rem 0 4rem;
+}
+
+.header__wrapper {
     align-items: flex-start;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4rem;
-    margin-top: 2.5rem;
 }
 
 .header__additional {
