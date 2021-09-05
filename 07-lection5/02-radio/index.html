@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<!-- Страница радио -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./radio.css">
-    </head>
-    <body>
-
-    </body>
+<head>
+    <title>Компонент Радио</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Демострационная страница компонента Радио">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../components/wrapper/wrapper.css">
+    <link rel="stylesheet" href="./radio.css">
+</head>
+<body>
+<form class="wrapper">
+    <br><br>
+    <label class="radio">
+        <input type="radio" class="radio__input" name="flow" value="20210708">
+        <i class="radio__view"></i>
+        <span class="radio__text">Default</span>
+    </label>
+    <br><br>
+    <label class="radio">
+        <input type="radio" class="radio__input" name="flow" checked value="20210812">
+        <i class="radio__view"></i>
+        <span class="radio__text">Default</span>
+    </label>
+    <br><br>
+    <label class="radio">
+        <input type="radio" class="radio__input" name="flow" value="20210916">
+        <i class="radio__view"></i>
+        <span class="radio__text">Default</span>
+    </label>
+</form>
+</body>
 </html>
