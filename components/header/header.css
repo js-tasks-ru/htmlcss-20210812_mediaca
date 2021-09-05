@@ -2,7 +2,7 @@
     padding: 2.5rem 0 4rem;
 }
 
-.header__wrapper {
+.header__inner {
     align-items: flex-start;
     display: flex;
     justify-content: space-between;
