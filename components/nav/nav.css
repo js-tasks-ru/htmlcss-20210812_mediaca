@@ -1,0 +1,19 @@
+.nav {
+    display: flex;
+}
+
+.nav__item {
+    color: var(--grey-3);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin: 0 2.4rem 0 0;
+    text-decoration: none;
+}
+
+.nav__item:last-child {
+    margin: 0;
+}
+
+.nav__item_active {
+    color: var(--black);
+}

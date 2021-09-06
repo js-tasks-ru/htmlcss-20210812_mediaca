@@ -6,16 +6,68 @@
     <meta name="description" content="страница с презентацией компонентов">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./components/wrapper/wrapper.css">
+    <link rel="stylesheet" href="./components/header/header.css">
     <link rel="stylesheet" href="./components/main/main.css">
     <link rel="stylesheet" href="./components/footer/footer.css">
+    <link rel="stylesheet" href="./components/nav/nav.css">
+    <link rel="stylesheet" href="./components/row/row.css">
+    <link rel="stylesheet" href="./components/card-list/card-list.css">
+    <link rel="stylesheet" href="./components/card/card.css">
 </head>
 <body>
 <header class="header">
-    <!-- @todo заполнить разметкой -->
+    <div class="header__inner wrapper">
+        <span class="logo">
+            logo
+            <!-- @todo добавить лого -->
+        </span>
+        <div class="header__additional">
+            <nav class="nav header__nav">
+                <span class="nav__item nav__item_active">Components</span>
+                <a href="#" class="nav__item">About</a>
+                <a href="#" class="nav__item">Contact</a>
+            </nav>
+            <div class="theme-switcher header__switcher">
+                switcher
+                <!-- @todo создать компонент переключатель темы -->
+            </div>
+        </div>
+    </div>
 </header>
 <main class="main">
     <div class="wrapper">
         <h1 class="main__title">Reusable component library</h1>
+    </div>
+    <div class="card-list">
+        <div class="wrapper">
+            <div class="row">
+                <div class="row__col row__col_3 card-list__item">
+                    <article class="card">
+                        <h3 class="card__title">Button</h3>
+                    </article>
+                </div>
+                <div class="row__col row__col_3 card-list__item">
+                    <article class="card">
+                        <h3 class="card__title">Skeleton</h3>
+                    </article>
+                </div>
+                <div class="row__col row__col_3 card-list__item">
+                    <article class="card">
+                        <h3 class="card__title">Histogram</h3>
+                    </article>
+                </div>
+                <div class="row__col row__col_3 card-list__item">
+                    <article class="card">
+                        <h3 class="card__title">Avatar</h3>
+                    </article>
+                </div>
+                <div class="row__col row__col_3 card-list__item">
+                    <article class="card">
+                        <h3 class="card__title">Calendar</h3>
+                    </article>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 <footer class="footer wrapper">

@@ -1,0 +1,8 @@
+.card-list {
+    background: var(--grey-5);
+    padding: 68px 0 204px;
+}
+
+.card-list__item:nth-of-type(n + 4) {
+    margin-top: 30px;
+}

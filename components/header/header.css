@@ -1,0 +1,22 @@
+.header {
+    padding: 2.5rem 0 4rem;
+}
+
+.header__inner {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__additional {
+    display: flex;
+    margin-left: 2rem;
+}
+
+.header__nav {
+    margin: 8px 6rem 0 0;
+}
+
+.header__switcher {
+    margin: 6px 0 0;
+}
