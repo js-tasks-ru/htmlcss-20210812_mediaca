@@ -45,6 +45,10 @@
     position: absolute;
 }
 
+.input_success .input__input {
+    padding-right: 5rem;
+}
+
 .input_success .input__icon {
     display: block;
     height: 2.3rem;
@@ -57,6 +61,7 @@
 
 .input_invalid .input__input {
     border-color: var(--red);
+    padding-right: 5rem;
 }
 
 .input_invalid .input__icon {
