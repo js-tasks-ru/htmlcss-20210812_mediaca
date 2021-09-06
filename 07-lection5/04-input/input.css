@@ -1,0 +1,78 @@
+.input {
+    position: relative;
+}
+
+.input__label {
+    color: var(--grey-3);
+    cursor: pointer;
+    display: block;
+    font-weight: 500;
+    font-size: 1.2rem;
+    outline: none;
+    line-height: 1.8rem;
+    margin: 0 0 .5rem;
+}
+
+.input__field {
+    position: relative;
+}
+
+.input__input {
+    background: var(--white);
+    border: 1px solid var(--grey-2);
+    box-sizing: border-box;
+    border-radius: .8rem;
+    color: var(--grey-4);
+    display: block;
+    font-size: 2rem;
+    line-height: 5.6rem;
+    outline: 0;
+    height: 5.6rem;
+    padding: 0 2.4rem;
+    width: 100%;
+}
+
+.input__input::placeholder {
+    color: var(--grey-2);
+}
+
+.input_disabled .input__label {
+    cursor: default;
+}
+
+.input__icon {
+    display: none;
+    position: absolute;
+}
+
+.input_success .input__icon {
+    display: block;
+    height: 2.3rem;
+    right: 1.7rem;
+    stroke: var(--blue);
+    stroke-width: .2rem;
+    top: 1.7rem;
+    width: 2.2rem;
+}
+
+.input_invalid .input__input {
+    border-color: var(--red);
+}
+
+.input_invalid .input__icon {
+    display: block;
+    fill: none;
+    height: 2.1rem;
+    right: 1.6rem;
+    stroke: var(--red);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: .2rem;
+    top: 1.7rem;
+    width: 2.4rem;
+}
+
+.input__input:focus {
+    border-color: var(--blue);
+    box-shadow: 0 1px 1px rgba(51, 154, 240, 0.1);
+}

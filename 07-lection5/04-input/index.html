@@ -13,33 +13,39 @@
     <br><br>
     <div class="input">
         <label class="input__label" for="field-test">LABEL</label>
-        <input class="input__input" id="field-test">
+        <div class="input__field">
+            <input class="input__input" id="field-test" placeholder="placeholder">
+        </div>
     </div>
     <br><br>
-    <div class="input">
+    <div class="input input_disabled">
         <label class="input__label" for="field-disabled">DISABLED</label>
-        <input class="input__input" id="field-disabled" disabled>
+        <div class="input__field">
+            <input class="input__input" id="field-disabled" disabled placeholder="placeholder">
+        </div>
     </div>
     <br><br>
-    <div class="input">
+    <div class="input input_success">
         <label class="input__label" for="field-success">SUCCESS</label>
-        <input class="input__input" id="field-success">
-        <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 11.08V12C20.9988 14.1564 20.3005 16.2547 19.0093 17.9818C17.7182 19.709 15.9033 20.9725 13.8354 21.5839C11.7674 22.1953 9.55726 22.1219 7.53447 21.3746C5.51168 20.6273 3.78465 19.2461 2.61096 17.4371C1.43727 15.628 0.879791 13.4881 1.02168 11.3363C1.16356 9.18455 1.99721 7.13631 3.39828 5.49706C4.79935 3.85781 6.69279 2.71537 8.79619 2.24013C10.8996 1.7649 13.1003 1.98232 15.07 2.85999"
-                  stroke="#374FC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M21 4L11 14.01L8 11.01" stroke="#374FC7" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round"/>
-        </svg>
+        <div class="input__field">
+            <input class="input__input" id="field-success" placeholder="placeholder" value="success">
+            <svg viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="input__icon">
+                <path d="M21 11.08V12C20.9988 14.1564 20.3005 16.2547 19.0093 17.9818C17.7182 19.709 15.9033 20.9725 13.8354 21.5839C11.7674 22.1953 9.55726 22.1219 7.53447 21.3746C5.51168 20.6273 3.78465 19.2461 2.61096 17.4371C1.43727 15.628 0.879791 13.4881 1.02168 11.3363C1.16356 9.18455 1.99721 7.13631 3.39828 5.49706C4.79935 3.85781 6.69279 2.71537 8.79619 2.24013C10.8996 1.7649 13.1003 1.98232 15.07 2.85999"/>
+                <path d="M21 4L11 14.01L8 11.01"/>
+            </svg>
+        </div>
     </div>
     <br><br>
-    <div class="input">
+    <div class="input input_invalid">
         <label class="input__label" for="field-invalid">INVALID</label>
-        <input class="input__input" id="field-invalid">
-        <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10.29 2.86002L1.82002 17C1.64539 17.3024 1.55299 17.6453 1.55201 17.9945C1.55103 18.3438 1.64151 18.6872 1.81445 18.9905C1.98738 19.2939 2.23675 19.5468 2.53773 19.7239C2.83871 19.901 3.18082 19.9962 3.53002 20H20.47C20.8192 19.9962 21.1613 19.901 21.4623 19.7239C21.7633 19.5468 22.0127 19.2939 22.1856 18.9905C22.3585 18.6872 22.449 18.3438 22.448 17.9945C22.4471 17.6453 22.3547 17.3024 22.18 17L13.71 2.86002C13.5318 2.56613 13.2807 2.32314 12.9812 2.15451C12.6817 1.98587 12.3438 1.89728 12 1.89728C11.6563 1.89728 11.3184 1.98587 11.0188 2.15451C10.7193 2.32314 10.4683 2.56613 10.29 2.86002V2.86002Z" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12 8V12" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12 15V15.5" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <div class="input__field">
+            <input class="input__input" id="field-invalid" placeholder="placeholder">
+            <svg viewBox="0 0 24 21" xmlns="http://www.w3.org/2000/svg" class="input__icon">
+                <path d="M10.29 2.86002L1.82002 17C1.64539 17.3024 1.55299 17.6453 1.55201 17.9945C1.55103 18.3438 1.64151 18.6872 1.81445 18.9905C1.98738 19.2939 2.23675 19.5468 2.53773 19.7239C2.83871 19.901 3.18082 19.9962 3.53002 20H20.47C20.8192 19.9962 21.1613 19.901 21.4623 19.7239C21.7633 19.5468 22.0127 19.2939 22.1856 18.9905C22.3585 18.6872 22.449 18.3438 22.448 17.9945C22.4471 17.6453 22.3547 17.3024 22.18 17L13.71 2.86002C13.5318 2.56613 13.2807 2.32314 12.9812 2.15451C12.6817 1.98587 12.3438 1.89728 12 1.89728C11.6563 1.89728 11.3184 1.98587 11.0188 2.15451C10.7193 2.32314 10.4683 2.56613 10.29 2.86002V2.86002Z"/>
+                <path d="M12 8V12"/>
+                <path d="M12 15V15.5"/>
+            </svg>
+        </div>
     </div>
 </div>
 </body>
