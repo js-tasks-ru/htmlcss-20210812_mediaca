@@ -28,7 +28,7 @@
     line-height: 5.6rem;
     outline: 0;
     height: 5.6rem;
-    padding: 0 2.4rem;
+    padding: 0 5rem 0 2.4rem;
     width: 100%;
 }
 
@@ -45,12 +45,7 @@
     position: absolute;
 }
 
-.input_success .input__input {
-    padding-right: 5rem;
-}
-
-.input_success .input__icon {
-    display: block;
+.input__icon_success {
     height: 2.3rem;
     right: 1.7rem;
     stroke: var(--blue);
@@ -59,13 +54,7 @@
     width: 2.2rem;
 }
 
-.input_invalid .input__input {
-    border-color: var(--red);
-    padding-right: 5rem;
-}
-
-.input_invalid .input__icon {
-    display: block;
+.input__icon_error {
     fill: none;
     height: 2.1rem;
     right: 1.6rem;
@@ -75,6 +64,15 @@
     stroke-width: .2rem;
     top: 1.7rem;
     width: 2.4rem;
+}
+
+.input_success .input__icon,
+.input_invalid .input__icon{
+    display: block;
+}
+
+.input_invalid .input__input {
+    border-color: var(--red);
 }
 
 .input__input:focus {
