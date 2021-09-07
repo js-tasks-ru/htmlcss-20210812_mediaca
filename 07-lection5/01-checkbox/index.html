@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <!-- Страница чекбокса -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./checkbox.css">
-    </head>
-    <body>
-
-    </body>
+<head>
+    <title>Компонент Чекбокс</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Демонстрационная страница компонента Чекбокс">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../components/wrapper/wrapper.css">
+    <link rel="stylesheet" href="./checkbox.css">
+</head>
+<body>
+<div class="wrapper">
+    <br><br>
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox__input">
+        <i class="checkbox__view">
+            <svg viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg" class="checkbox__view-icon">
+                <path d="M1.5 7.5L5 11L13 2"/>
+            </svg>
+        </i>
+        <span class="checkbox__text">Default</span>
+    </label>
+    <br><br>
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox__input" checked>
+        <i class="checkbox__view">
+            <svg viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg" class="checkbox__view-icon">
+                <path d="M1.5 7.5L5 11L13 2"/>
+            </svg>
+        </i>
+        <span class="checkbox__text">Checked</span>
+    </label>
+    <br><br>
+    <label class="checkbox">
+        <input type="checkbox" class="checkbox__input" checked disabled>
+        <i class="checkbox__view">
+            <svg viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg" class="checkbox__view-icon">
+                <path d="M1.5 7.5L5 11L13 2"/>
+            </svg>
+        </i>
+        <span class="checkbox__text">Checked/Disabled</span>
+    </label>
+</div>
+</body>
 </html>
